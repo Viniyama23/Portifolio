@@ -1,0 +1,59 @@
+/* ==========================================================================
+   projects.css — filtros e cards de projetos.
+   ========================================================================== */
+
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.75rem; }
+
+.filter {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  font: 500 var(--text-sm) var(--font-body);
+  cursor: pointer;
+}
+.filter:hover { border-color: var(--ink); color: var(--ink); }
+.filter[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  min-width: 0;
+  padding: 1.35rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: border-color 0.15s, transform 0.15s;
+}
+.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.card[hidden] { display: none; }
+
+.card__top { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; }
+.card__kind { color: var(--accent); }
+.card__star { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--ink-soft); }
+
+.card__title { font-size: var(--text-xl); font-weight: 700; letter-spacing: -0.015em; overflow-wrap: anywhere; }
+.card__desc { color: var(--ink-soft); font-size: var(--text-sm); }
+
+.card__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin: 0; padding: 0; }
+
+/* O rodapé fica sempre na base do card, com ou sem link */
+.card__foot { margin-top: auto; padding-top: 0.25rem; min-height: 1.5rem; }
+.card__link {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--accent);
+  text-underline-offset: 4px;
+}
+.card__link:hover { color: var(--ink); }
+.card__note { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--ink-soft); }
+
+.projects__more { margin-top: 2rem; }

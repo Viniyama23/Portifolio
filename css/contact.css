@@ -1,0 +1,36 @@
+/* ==========================================================================
+   contact.css — seção "Contato" e rodapé.
+   ========================================================================== */
+
+.contact__list { display: grid; gap: 0; border-top: 1px solid var(--line); max-width: 40rem; }
+
+.contact__row {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+.contact__value { overflow-wrap: anywhere; font-weight: 500; }
+a.contact__value { text-underline-offset: 4px; }
+a.contact__value:hover { color: var(--accent); }
+
+.copy-btn {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--ink);
+  font: 500 var(--text-xs) var(--font-mono);
+  cursor: pointer;
+}
+.copy-btn:hover { border-color: var(--ink); }
+
+.site-footer { padding-block: 2rem; border-top: 1px solid var(--line); }
+.site-footer p { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--ink-soft); }
+
+@media (max-width: 520px) {
+  .contact__row { grid-template-columns: minmax(0, 1fr) auto; }
+  .contact__row .label { grid-column: 1 / -1; }
+}

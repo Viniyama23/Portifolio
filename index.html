@@ -1,0 +1,162 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Vinicius Yamashita</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Portfólio de Vinicius Yamashita, estudante de Engenharia de Software com foco em back-end e bancos de dados.">
+
+<!-- Fontes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<!-- Estilos: um arquivo por seção -->
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/about.css">
+<link rel="stylesheet" href="css/skills.css">
+<link rel="stylesheet" href="css/projects.css">
+<link rel="stylesheet" href="css/contact.css">
+
+<!-- ============================== CABEÇALHO ============================== -->
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="site-header__brand" href="#inicio">vinicius<span>.</span>yamashita</a>
+    <nav class="site-nav" aria-label="Principal">
+      <ul class="site-nav__links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Alternar tema claro e escuro">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 2a6 6 0 0 1 0 12z" fill="currentColor"/>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+
+<!-- ================================ HERO ================================= -->
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div>
+      <p class="label hero__status">Aberto a vagas em tecnologia</p>
+      <h1 class="hero__name">Vinicius <em>Yamashita</em></h1>
+      <p class="hero__role">Estudante de Engenharia de Software, com foco em back-end e bancos de dados.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#projetos">Ver projetos</a>
+        <a class="btn" href="https://github.com/Viniyama23" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/vinicius-yamashita/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="hero__photo">
+      <img src="assets/foto.jpg" alt="Foto de Vinicius Yamashita" width="400" height="400">
+    </div>
+  </div>
+</section>
+
+<!-- ================================ SOBRE ================================ -->
+<section class="section" id="sobre">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="label">Sobre</p>
+      <h2 class="section__title">Back-end, bancos de dados e automação</h2>
+    </div>
+    <div class="about__grid">
+      <div class="about__text">
+        <p>Estou no quarto ano de Engenharia de Software na FIAP. Gosto de trabalhar com a parte que não aparece na tela: regras de negócio, modelagem de dados e integração entre sistemas.</p>
+        <p>Tenho experiência como Assistente de TI na Renea Infraestrutura S.A. e uso Python, Java, React, TypeScript e SQL nos projetos da faculdade, do TCC a automações com RPA e experimentos com visão computacional e LLMs locais.</p>
+        <p>Agora estou atrás da minha vaga na área de tecnologia e estudando cibersegurança (pentest) e análise de dados.</p>
+      </div>
+      <dl class="facts">
+        <div class="facts__row"><dt>Formação</dt><dd>Engenharia de Software, FIAP (4º ano)</dd></div>
+        <div class="facts__row"><dt>Foco</dt><dd>Back-end e bancos de dados</dd></div>
+        <div class="facts__row"><dt>Stack</dt><dd>Python, Java, React, TypeScript, SQL, Oracle</dd></div>
+        <div class="facts__row"><dt>Interesses</dt><dd>Cibersegurança e análise de dados</dd></div>
+        <div class="facts__row"><dt>Local</dt><dd>Brasil</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ HABILIDADES ============================== -->
+<section class="section" id="habilidades">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="label">Habilidades</p>
+      <h2 class="section__title">Tecnologias que uso</h2>
+      <p class="skills__query"><b>SELECT</b> * <b>FROM</b> habilidades <b>ORDER BY</b> uso_nos_projetos;</p>
+    </div>
+    <div class="skills__grid" id="skills-grid"></div>
+  </div>
+</section>
+
+<!-- ============================== PROJETOS =============================== -->
+<section class="section" id="projetos">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="label">Projetos</p>
+      <h2 class="section__title">O que já construí</h2>
+      <p class="section__lead">Trabalhos da faculdade, projetos pessoais e exercícios de estudo. Os cards com link levam ao código no GitHub.</p>
+    </div>
+    <div class="filters" id="projects-filters" role="group" aria-label="Filtrar projetos"></div>
+    <div class="projects__grid" id="projects-grid"></div>
+    <p class="projects__more">
+      <a class="btn" href="https://github.com/Viniyama23?tab=repositories" target="_blank" rel="noopener noreferrer">Todos os repositórios ↗</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============================== CONTATO ================================ -->
+<section class="section" id="contato">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="label">Contato</p>
+      <h2 class="section__title">Vamos conversar</h2>
+      <p class="section__lead">O jeito mais rápido de falar comigo é por e-mail ou pelo LinkedIn.</p>
+    </div>
+    <div class="contact__list">
+      <div class="contact__row">
+        <span class="label">E-mail</span>
+        <span class="contact__value" id="email-text">vyamashita45@gmail.com</span>
+        <button class="copy-btn" type="button" data-copy="vyamashita45@gmail.com" data-source="email-text">copiar</button>
+      </div>
+      <div class="contact__row">
+        <span class="label">LinkedIn</span>
+        <a class="contact__value" href="https://www.linkedin.com/in/vinicius-yamashita/" target="_blank" rel="noopener noreferrer">linkedin.com/in/vinicius-yamashita</a>
+        <span></span>
+      </div>
+      <div class="contact__row">
+        <span class="label">GitHub</span>
+        <a class="contact__value" href="https://github.com/Viniyama23" target="_blank" rel="noopener noreferrer">github.com/Viniyama23</a>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================== RODAPÉ ================================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© <span id="year">2026</span> Vinicius Yamashita</p>
+  </div>
+</footer>
+
+<!-- Scripts: dados, componentes e, por último, o ponto de entrada -->
+<script src="js/data/projects.js"></script>
+<script src="js/data/skills.js"></script>
+<script src="js/components/project-card.js"></script>
+<script src="js/components/projects-section.js"></script>
+<script src="js/components/skills-section.js"></script>
+<script src="js/components/theme-toggle.js"></script>
+<script src="js/components/copy-button.js"></script>
+<script src="js/main.js"></script>
+
+</body></html>

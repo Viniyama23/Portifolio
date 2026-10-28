@@ -1,0 +1,56 @@
+/* ==========================================================================
+   header.css — barra de navegação fixa no topo.
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 11;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.75rem;
+}
+
+.site-header__brand {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.site-header__brand span { color: var(--accent); }
+
+.site-nav { display: flex; align-items: center; gap: 1.25rem; min-width: 0; }
+.site-nav__links { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
+.site-nav__links a {
+  font-size: var(--text-sm);
+  text-decoration: none;
+  color: var(--ink-soft);
+}
+.site-nav__links a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+
+.theme-toggle {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+.theme-toggle:hover { border-color: var(--ink); }
+
+/* Em telas estreitas, só os links essenciais */
+@media (max-width: 560px) {
+  .site-nav__links li:not(:first-child):not(:nth-child(3)) { display: none; }
+  .site-nav, .site-nav__links { gap: 0.9rem; }
+}
